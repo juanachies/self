@@ -30,7 +30,7 @@ body {
     margin: 0 auto;
 }
 
-h3 {
+h4 {
     padding: 0.625rem; /* 10px */
     text-align: center;
 }
@@ -57,7 +57,21 @@ ul {
 }
 
 .b {
-    padding-top: 1rem; /* 20px */
+    padding-top: 0.8rem; /* 20px */
+}
+
+.cerrar-barra {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #392c1f;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 
@@ -68,24 +82,251 @@ main {
     padding: 3.125rem 5rem; /* 50px 80px */
 }
 
+.titulo{
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.icono{
+    height: 3rem;
+    width: auto;
+    padding-right: 1rem;
+}
+
 h2{
     padding-bottom: 1rem;
 }
 
+.c{
+    padding-top: 1rem;
+}
+
+.a{
+    padding-top: 4rem;
+}
+
+
+.servicios-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el bloque */
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.servicio {
+    display: flex;
+    align-items: center; /* Alinea verticalmente ícono y texto */
+    gap: 10px; /* Espacio entre ícono y texto */
+    margin: 8px 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.servicio img {
+    width: 24px;
+    height: 24px;
+}
+
 
 /* ---------------- Cards --------------------*/
+
+.cards {
+    display: grid;
+    gap: 3rem; 
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    padding: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    align-items: center;
+}
+
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    background-color: #e0e0db;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-.container {
-    padding: 2px 16px;
+.card img {
+    width: 100%;
+    object-fit: cover;
+    height: 150px;
+}
+
+.card-body {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+}
+
+.card-body p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #bab78c;
+    color: #392c1f;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-body div {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; 
+    margin-top: 1rem;
 }
 
 
-/* --------------------------- Footer ------------------------------------*/
+/* --------------------- boton personal ---------------------*/
+.boton{
+    display: none;
+}
+
+
+
+/* ------------------- Responsive design ------------------- */
+
+@media (max-width: 1000px) {
+
+    /* ---------- barra ------------ */
+
+    .barra {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .barra.activa {
+        transform: translateX(0);
+    }
+
+    .cerrar-barra {
+        display: block;
+    }
+    
+    
+    /* ---------- boton ------------- */
+
+    .boton {
+        display: block;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background-color: #bab78c;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .boton-pic{
+        height: 2rem; /* 180px */
+        width: auto;
+        border-radius: 50%;
+        border: 0.09rem solid #392c1f; /* 3px */
+        display: block;
+        margin: 0 auto; /* alineado horizontal */
+    }
+
+    .boton-p{
+        padding-left: 0.5rem;
+    }
+
+    
+    /* ---------- main ------------- */
+
+    main {
+        margin-left: 0;
+        padding: 2rem;
+    }
+    
+}
+
+
+@media (max-width: 500px) {
+
+    /* ---------- barra ------------ */
+
+    .barra {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .barra.activa {
+        transform: translateX(0);
+    }
+
+    .cerrar-barra {
+        display: block;
+    }
+    
+    
+    /* ---------- boton ------------- */
+
+    .boton {
+        display: block;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background-color: #bab78c;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .boton-pic{
+        height: 2rem; /* 180px */
+        width: auto;
+        border-radius: 50%;
+        border: 0.09rem solid #392c1f; /* 3px */
+        display: block;
+        margin: 0 auto; /* alineado horizontal */
+    }
+
+    .boton-p{
+        padding-left: 0.5rem;
+    }
+
+    
+    /* ---------- main ------------- */
+
+    main {
+        margin-left: 0;
+        padding: 2rem;
+    }
+
+    .titulo{
+        display: flex;
+        padding-bottom: 1rem;
+        flex-direction: column;
+    }
+
+    .icono{
+        margin: 0 auto;
+        width: 4rem;
+        height: auto;
+    }
+}

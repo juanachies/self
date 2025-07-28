@@ -10,8 +10,10 @@
 </head>
 <body>
     <aside class="barra">
+        <button class="cerrar-barra">✕</button>
+
         <img src="./img/pic.jpg" alt="picture" class="pic">
-        <h3>Juana</h3>
+        <h4>Juana</h4>
 
         <p>
             Argentina — English / Español
@@ -26,7 +28,7 @@
             </ul>
         </div>
 
-        <div class="b">
+        <div>
             <h4>Learning Path:</h4>
             <ul>
                 <li>Technicature in Artificial Intelligence (ongoing)</li>
@@ -48,29 +50,97 @@
     </aside>
 
     <main>
-        <h1>Web Developer – Frontend & Backend</h1>
+        <button class="boton">
+            <img class="boton-pic" src="./img/pic.jpg" alt="picture">
+            <p class="boton-p">Personal information</p>
+        </button>
+
+        <div class="titulo">
+            <img src="./img/icono.png" alt="icono" class="icono">
+            <h1> Web Developer – Frontend & Backend</h1>
+        </div>
+        
         <h2>Custom Websites for Small Businesses and Creatives</h2>
 
-        <p>
-            Passionate about building clean, functional and responsive websites. <br>
-            Let’s bring your ideas to life! <br> <br>
-            *descripcion de lo que hago* <br>
-
-            *servicios que ofrezco* <br>
-            <br><br>
-
-            *cards con paginas que hice*
-
-            https://www.youtube.com/watch?v=4V8IDxmbvD0
+        <p class="c">
+            Functional, responsive websites that help ideas grow and connect with people. A smart solution for anyone ready to launch online.
+            Your ideas can become interactive experiences using HTML, CSS, JavaScript and backend tools. 
+            Perfect for small businesses, portfolios, or anyone needing a professional online presence.
         </p>
 
-        <div class="card">
-            <img src="img_avatar.png" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>John Doe</b></h4>
-                <p>Architect & Engineer</p>
+        
+        <h3 class="a">Take a look at previous designs:</h3>
+
+        <section class="cards">
+            <article class="card">
+                <img src="ruta/a-tu-img1.jpg" alt="Proyecto 1">
+                <div class="card-body">
+                    <h3>Learning Hub</h3>
+                    <p>Descripción breve.</p>
+                    <div>
+                        <a href="#" class="card-button">Visit site</a>
+                        <a href="#" class="card-button">GitHub repository</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="ruta/a-tu-img1.jpg" alt="Proyecto 1">
+                <div class="card-body">
+                    <h3>Título del Proyecto</h3>
+                    <p>Descripción breve.</p>
+                    <div>
+                        <a href="#" class="card-button">Visit site</a>
+                        <a href="#" class="card-button">GitHub repository</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="ruta/a-tu-img1.jpg" alt="Proyecto 1">
+                <div class="card-body">
+                    <h3>Título del Proyecto</h3>
+                    <p>Descripción breve.</p>
+                    <div>
+                        <a href="#" class="card-button">Visit site</a>
+                        <a href="#" class="card-button">GitHub repository</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    
+        <div class="servicios-container">
+            <h3 class="a">Services I offer:</h3>
+            <div class="servicio">
+                <img src="./img/custom.png" alt="icono"> Custom landing pages 
+            </div>
+            <div class="servicio">
+                <img src="./img/personal.png" alt="icono"> Portfolio or personal websites
+            </div>
+            <div class="servicio">
+                <img src="./img/responsive.png" alt="icono"> Responsive design (mobile-friendly layout)
+            </div>
+            <div class="servicio">
+                <img src="./img/static.png" alt="icono"> Static website development with HTML/CSS/JS
+            </div>
+            <div class="servicio">
+                <img src="./img/back.png" alt="icono"> Basic backend setup using Flask (Python)
+            </div>
+            <div class="servicio">
+                <img src="./img/formulario.png" alt="icono"> Integration with contact forms or download buttons
+            </div>
+            <div class="servicio">
+                <img src="./img/github.png" alt="icono"> GitHub deployment or repository setup
+            </div>
+            <div class="servicio">
+                <img src="./img/limpieza.png" alt="icono"> Code cleanup or restyling of existing websites
             </div>
         </div>
+
+        
     </main>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
